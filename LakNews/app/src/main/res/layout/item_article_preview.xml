@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/article_card_horizontal_margin"
+        android:layout_marginLeft="@dimen/article_card_horizontal_margin"
+        android:layout_marginTop="@dimen/article_card_vertical_margin"
+        android:layout_marginBottom="@dimen/article_card_vertical_margin"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:cardCornerRadius="@dimen/article_card_corners">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/article_image"
+                android:transitionName="@string/transition_image_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/article_image_height"
+                android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bottom_shadow"
+                android:src="@drawable/bottom_shadow"
+                android:layout_alignBottom="@id/article_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/article_image_button_height"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/author_view_height"
+                android:drawablePadding="@dimen/author_padding"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:singleLine="true"
+                android:layout_marginEnd="@dimen/author_margin_end"
+                android:text="@string/author"
+                android:gravity="bottom"
+                android:layout_alignStart="@id/title"
+                android:layout_alignEnd="@id/article_date"
+                android:layout_alignTop="@id/article_date" />
+
+            <FrameLayout
+                android:id="@+id/article_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_white"
+                android:padding="@dimen/date_padding"
+                android:layout_alignBottom="@id/article_image"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/date_margin_end"
+                android:layout_marginTop="@dimen/date_margin_top">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/date_image_size"
+                    android:layout_height="@dimen/date_image_size"
+                    android:layout_marginLeft="@dimen/date_image_margin"
+                    android:layout_marginRight="@dimen/date_image_margin"
+                    android:src="@drawable/ic_date"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/publishedAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#606060"
+                    android:layout_marginStart="@dimen/date_text_margin_start"
+                    android:layout_marginEnd="@dimen/date_text_margin_end"
+                    android:text="@string/example_date" />
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="@dimen/article_title_text_size"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/article_title_margin_horizontal"
+                android:layout_marginRight="@dimen/article_title_margin_horizontal"
+                android:layout_marginTop="@dimen/article_title_margin_vertical"
+                android:layout_below = "@id/article_image"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/article_description_height"
+                android:text="@string/description"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="@dimen/article_description_margin_horizontal"
+                android:layout_marginRight="@dimen/article_description_margin_horizontal"
+                android:layout_marginTop="@dimen/article_description_margin_top" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/source"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/article_source_height"
+                android:layout_marginTop="@dimen/article_source_margin_vertical"
+                android:layout_marginBottom="@dimen/article_source_margin_vertical"
+                android:layout_marginStart="@dimen/article_source_margin_start"
+                android:layout_below="@id/desc"
+                android:text="@string/source"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/article_time_height"
+                android:layout_below="@id/desc"
+                android:layout_marginTop="@dimen/article_time_margin_vertical"
+                android:layout_marginBottom="@dimen/article_time_margin_vertical"
+                android:layout_toEndOf="@id/source"
+                android:maxLines="1"
+                android:drawablePadding="@dimen/article_time_padding"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="@string/time"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

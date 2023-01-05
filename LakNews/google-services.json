@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "198686341481",
+    "firebase_url": "https://mvvmnews-b9aa6.firebaseio.com",
+    "project_id": "mvvmnews-b9aa6",
+    "storage_bucket": "mvvmnews-b9aa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198686341481:android:57f72818456184448d25f8",
+        "android_client_info": {
+          "package_name": "com.example.laknews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198686341481-ud3hpfhgi8kegdtepg2dh5lfrjoo8erv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBluwSO3y_7By0R1s4M6v6p2Cpnyc1AwvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198686341481-ud3hpfhgi8kegdtepg2dh5lfrjoo8erv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
